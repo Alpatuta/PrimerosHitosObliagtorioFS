@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hito 1 - Pruebas AJAX</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <div>
+        <p class="eyebrow">Obligatorio 2</p>
+        <h1>Hito 1 - Consultas AJAX</h1>
+        <p>
+          HTML + JS comun para probar todos los servicios de la API con datos
+          fijos y en el orden necesario.
+        </p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <label for="baseUrl">Base URL de la API</label>
+      <input id="baseUrl" value="https://obligatorio-fullstack-six.vercel.app/V1" />
+      <div class="actions">
+        <button id="btnFullFlow">Ejecutar flujo completo</button>
+        <button id="btnClear" class="secondary">Limpiar salida</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <h2>1. Auth</h2>
+        <button data-action="register">Registro</button>
+        <button data-action="login">Login</button>
+      </article>
+
+      <article class="panel">
+        <h2>2. Datos base</h2>
+        <button data-action="createCategory">Crear categoria</button>
+        <button data-action="createIngredient">Crear ingrediente</button>
+        <button data-action="uploadImage">Subir imagen fija</button>
+      </article>
+
+      <article class="panel">
+        <h2>3. Recetas</h2>
+        <button data-action="createRecipe">Crear receta</button>
+        <button data-action="getRecipes">Listar recetas</button>
+        <button data-action="getRecipeById">Receta por ID</button>
+        <button data-action="updateRecipe">Modificar receta</button>
+        <button data-action="getCombinedRecipes">Recetas combinadas</button>
+      </article>
+
+      <article class="panel">
+        <h2>4. Reviews</h2>
+        <button data-action="createReview">Crear review</button>
+        <button data-action="getReviewById">Review por ID</button>
+        <button data-action="getReviewsByRecipe">Reviews por receta</button>
+        <button data-action="getMyReviews">Mis reviews</button>
+        <button data-action="updateReview">Modificar review</button>
+      </article>
+
+      <article class="panel">
+        <h2>5. Usuario / IA</h2>
+        <button data-action="changePlan">Cambiar plan</button>
+        <button data-action="getAiModels">GET IA</button>
+        <button data-action="askAi">POST IA</button>
+        <button data-action="createRecipeWithAi">Crear receta IA</button>
+        <button data-action="adaptRecipeWithAi">Adaptar receta IA</button>
+      </article>
+
+      <article class="panel">
+        <h2>6. Limpieza</h2>
+        <button data-action="deleteReview" class="danger">Eliminar review</button>
+        <button data-action="deleteRecipe" class="danger">Eliminar receta</button>
+        <button data-action="deleteIngredient" class="danger">Eliminar ingrediente</button>
+        <button data-action="deleteCategory" class="danger">Eliminar categoria</button>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Estado de IDs guardados</h2>
+      <pre id="stateOutput">{}</pre>
+    </section>
+
+    <section class="panel">
+      <h2>Salida</h2>
+      <pre id="logOutput">Listo para probar.</pre>
+    </section>
+  </main>
+
+  <script src="./api-test.js" defer></script>
+</body>
+
+</html>
