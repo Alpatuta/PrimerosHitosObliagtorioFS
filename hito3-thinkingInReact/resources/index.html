@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recetario IA - Hito 2</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="spa-root">
+  <main class="spa-stage">
+    <section id="login" class="screen screen-auth" aria-labelledby="login-title">
+      <div class="auth-shell">
+        <section class="auth-visual" aria-label="Presentacion de Recetario IA">
+          <a class="brand brand-on-visual" href="#login">
+            <span class="brand-mark">R</span>
+            <span>Recetario IA</span>
+          </a>
+          <img src="./assets/recipe-board.svg" alt="Mesa con recetas, platos y hierbas" />
+          <div class="visual-copy">
+            <p class="eyebrow">Cocina organizada</p>
+            <h1>Gestiona tus recetas, imagenes y variantes con IA.</h1>
+            <p>Un espacio simple para guardar preparaciones, revisar uso del plan y encontrar ideas nuevas.</p>
+          </div>
+        </section>
+
+        <section class="auth-card">
+          <a class="brand mobile-brand" href="#login">
+            <span class="brand-mark">R</span>
+            <span>Recetario IA</span>
+          </a>
+          <p class="eyebrow">Ingreso</p>
+          <h2 id="login-title">Bienvenido de nuevo</h2>
+          <p class="muted">Accede al dashboard para gestionar tus recetas.</p>
+
+          <form class="form">
+            <div class="field">
+              <label for="login-correo">Correo</label>
+              <input id="login-correo" type="email" placeholder="usuario@mail.com" />
+            </div>
+
+            <div class="field">
+              <label for="login-contrasenia">Contrasena</label>
+              <input id="login-contrasenia" type="password" placeholder="Password1" />
+            </div>
+
+            <p class="form-message">El boton se habilitara cuando ambos campos sean validos.</p>
+
+            <a class="button button-primary" href="#dashboard">Ingresar</a>
+          </form>
+
+          <p class="auth-switch">
+            No tienes cuenta?
+            <a href="#registro">Crear cuenta</a>
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <section id="registro" class="screen screen-auth" aria-labelledby="registro-title">
+      <div class="auth-shell auth-shell-reverse">
+        <section class="auth-card">
+          <a class="brand" href="#login">
+            <span class="brand-mark">R</span>
+            <span>Recetario IA</span>
+          </a>
+          <p class="eyebrow">Registro</p>
+          <h1 id="registro-title">Crea tu espacio de recetas</h1>
+          <p class="muted">Completa los datos previstos para comenzar con el plan plus.</p>
+
+          <form class="form form-grid">
+            <div class="field">
+              <label for="registro-nombre">Nombre</label>
+              <input id="registro-nombre" type="text" placeholder="Rodrigo Pintos" />
+            </div>
+
+            <div class="field">
+              <label for="registro-correo">Correo</label>
+              <input id="registro-correo" type="email" placeholder="usuario@mail.com" />
+            </div>
+
+            <div class="field">
+              <label for="registro-contrasenia">Contrasena</label>
+              <input id="registro-contrasenia" type="password" placeholder="Password1" />
+            </div>
+
+            <div class="field">
+              <label for="registro-confirmar">Repetir contrasena</label>
+              <input id="registro-confirmar" type="password" placeholder="Password1" />
+            </div>
+
+            <p class="form-message form-message-wide">
+              El boton de registro permanecera deshabilitado si algun dato no es valido.
+            </p>
+
+            <a class="button button-primary form-message-wide" href="#dashboard">Registrarme</a>
+          </form>
+
+          <p class="auth-switch">
+            Ya tienes cuenta?
+            <a href="#login">Ingresar</a>
+          </p>
+        </section>
+
+        <section class="auth-visual compact-visual" aria-label="Resumen visual del producto">
+          <img src="./assets/recipe-board.svg" alt="Mesa con recetas, platos y hierbas" />
+          <div class="visual-stats">
+            <div>
+              <strong>4</strong>
+              <span>recetas plan plus</span>
+            </div>
+            <div>
+              <strong>IA</strong>
+              <span>variantes y adaptaciones</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="dashboard" class="screen screen-dashboard" aria-labelledby="dashboard-title">
+      <div class="app-layout">
+        <aside class="sidebar">
+          <a class="brand" href="#dashboard">
+            <span class="brand-mark">R</span>
+            <span>Recetario IA</span>
+          </a>
+
+          <nav class="nav-list" aria-label="Navegacion principal">
+            <a class="active" href="#dashboard">Resumen</a>
+            <a href="#dashboard">Agregar receta</a>
+            <a href="#dashboard">Recetas</a>
+            <a href="#dashboard">Uso del plan</a>
+            <a href="#dashboard">Grafico</a>
+          </nav>
+
+          <a class="button button-ghost logout-link" href="#login">Cerrar sesion</a>
+        </aside>
+
+        <main class="dashboard">
+          <header class="topbar">
+            <div>
+              <p class="eyebrow">Dashboard</p>
+              <h1 id="dashboard-title">Gestion general de recetas</h1>
+            </div>
+            <div class="profile-pill">
+              <span class="avatar">RP</span>
+              <div>
+                <strong>Rodrigo</strong>
+                <span>Plan plus</span>
+              </div>
+            </div>
+          </header>
+
+          <section class="metrics-grid" aria-label="Resumen de uso">
+            <article class="metric">
+              <span class="metric-label">Recetas guardadas</span>
+              <strong>3 / 4</strong>
+              <small>75% de uso del plan plus</small>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Categorias</span>
+              <strong>5</strong>
+              <small>Organizacion principal</small>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Reviews</span>
+              <strong>12</strong>
+              <small>Actividad reciente</small>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Imagenes</span>
+              <strong>8</strong>
+              <small>Subidas a la aplicacion</small>
+            </article>
+          </section>
+
+          <section class="dashboard-grid">
+            <article class="panel large-panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Alta</p>
+                  <h2>Agregar nueva receta</h2>
+                </div>
+                <span class="status-chip">Disponible</span>
+              </div>
+
+              <form class="recipe-form">
+                <div class="field">
+                  <label for="receta-titulo">Titulo</label>
+                  <input id="receta-titulo" type="text" placeholder="Tarta rustica de verduras" />
+                </div>
+
+                <div class="field">
+                  <label for="receta-categoria">Categoria</label>
+                  <select id="receta-categoria">
+                    <option>Vegetariana</option>
+                    <option>Pastas</option>
+                    <option>Postres</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="receta-dificultad">Dificultad</label>
+                  <select id="receta-dificultad">
+                    <option>Facil</option>
+                    <option>Media</option>
+                    <option>Dificil</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="receta-imagen">Imagen</label>
+                  <input id="receta-imagen" type="file" />
+                </div>
+
+                <div class="field span-2">
+                  <label for="receta-descripcion">Descripcion</label>
+                  <textarea id="receta-descripcion" rows="4" placeholder="Descripcion breve de la receta"></textarea>
+                </div>
+
+                <div class="field span-2">
+                  <label for="receta-ingredientes">Ingredientes</label>
+                  <textarea id="receta-ingredientes" rows="3" placeholder="Harina, huevos, queso, vegetales"></textarea>
+                </div>
+
+                <div class="field span-2">
+                  <label for="receta-pasos">Pasos</label>
+                  <textarea id="receta-pasos" rows="4" placeholder="Preparar, mezclar, hornear y servir"></textarea>
+                </div>
+
+                <button class="button button-primary span-2" type="button">Guardar receta</button>
+              </form>
+            </article>
+
+            <aside class="panel usage-panel">
+              <p class="eyebrow">Informe de uso</p>
+              <h2>Plan plus</h2>
+              <div class="usage-ring" aria-hidden="true">
+                <span>75%</span>
+              </div>
+              <p class="muted">3 de 4 recetas disponibles utilizadas.</p>
+              <button class="button button-secondary" type="button">Cambiar a premium</button>
+            </aside>
+          </section>
+
+          <section class="panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Documentos</p>
+                <h2>Listado de recetas</h2>
+              </div>
+              <div class="filter-row">
+                <select aria-label="Filtrar por categoria">
+                  <option>Todas las categorias</option>
+                  <option>Vegetariana</option>
+                  <option>Pastas</option>
+                </select>
+                <select aria-label="Filtrar por dificultad">
+                  <option>Todas las dificultades</option>
+                  <option>Facil</option>
+                  <option>Media</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="recipe-list">
+              <article class="recipe-row">
+                <img src="./assets/recipe-board.svg" alt="Miniatura de receta vegetariana" />
+                <div>
+                  <strong>Tarta rustica de verduras</strong>
+                  <span>Vegetariana · Media · 4 ingredientes</span>
+                </div>
+                <div class="row-actions">
+                  <button type="button">Editar</button>
+                  <button class="danger" type="button">Eliminar</button>
+                </div>
+              </article>
+
+              <article class="recipe-row">
+                <img src="./assets/recipe-board.svg" alt="Miniatura de pasta casera" />
+                <div>
+                  <strong>Pasta cremosa con hierbas</strong>
+                  <span>Pastas · Facil · 6 ingredientes</span>
+                </div>
+                <div class="row-actions">
+                  <button type="button">Editar</button>
+                  <button class="danger" type="button">Eliminar</button>
+                </div>
+              </article>
+
+              <article class="recipe-row">
+                <img src="./assets/recipe-board.svg" alt="Miniatura de postre" />
+                <div>
+                  <strong>Brownie intenso de cacao</strong>
+                  <span>Postres · Facil · 5 ingredientes</span>
+                </div>
+                <div class="row-actions">
+                  <button type="button">Editar</button>
+                  <button class="danger" type="button">Eliminar</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Visualizacion</p>
+                <h2>Espacio reservado para grafico</h2>
+              </div>
+            </div>
+            <div class="chart-placeholder">
+              <span>Grafico pendiente para siguiente hito</span>
+            </div>
+          </section>
+        </main>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
