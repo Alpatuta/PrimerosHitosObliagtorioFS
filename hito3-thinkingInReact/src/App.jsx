@@ -10,15 +10,7 @@ function App() {
   return (
     <div className="spa-root">
       <main className="spa-stage">
-        <section
-          id="login"
-          className="screen screen-auth"
-          aria-labelledby="login-title"
-        >
-          <div className="spa-stage">
-            <Login />
-          </div>
-        </section>
+        <Login />
       </main>
     </div>
   );

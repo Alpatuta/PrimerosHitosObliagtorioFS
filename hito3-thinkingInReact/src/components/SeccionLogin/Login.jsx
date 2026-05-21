@@ -1,18 +1,19 @@
-import AuthCardLogin from "./AuthCardLogin"
-import AuthVisual from "./AuthVisual"
+import AuthCardLogin from "./AuthCardLogin";
+import AuthVisual from "./AuthVisual";
 
 const Login = () => {
   return (
-    <div className="auth-shell">
-      
-      <AuthVisual />
-      <AuthCardLogin />
+    <section
+      id="login"
+      className="screen screen-auth"
+      aria-labelledby="login-title"
+    >
+      <div className="auth-shell">
+        <AuthVisual />
+        <AuthCardLogin />
+      </div>
+    </section>
+  );
+};
 
-
-
-
-    </div>
-  )
-}
-
-export default Login
+export default Login;
