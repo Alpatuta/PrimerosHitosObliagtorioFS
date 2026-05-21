@@ -6,7 +6,7 @@ const AuthVisual = () => {
         <span>Recetario IA</span>
       </a>
       <img
-        src="../assets/recipe-board.svg"
+        src="../../../resources/assets/recipe-board.svg"
         alt="Mesa con recetas, platos y hierbas"
       />
       <div className="visual-copy">
