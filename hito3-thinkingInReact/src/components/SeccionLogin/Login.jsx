@@ -1,9 +1,13 @@
+import AuthCardLogin from "./AuthCardLogin"
+import AuthVisual from "./AuthVisual"
 
 const Login = () => {
   return (
-    <div>
+    <div className="auth-shell">
       
-      
+      <AuthVisual />
+      <AuthCardLogin />
+
 
 
 
