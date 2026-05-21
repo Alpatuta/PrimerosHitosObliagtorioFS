@@ -1,7 +1,6 @@
 const AuthVisual = () => {
   return (
     <section className="auth-visual" aria-label="Presentacion de Recetario IA">
- 
       <a className="brand brand-on-visual" href="#login">
         <span className="brand-mark">R</span>
         <span>Recetario IA</span>
