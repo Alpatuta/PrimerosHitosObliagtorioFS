@@ -3,7 +3,7 @@ import HeaderPanel from "./HeaderPanel";
 
 const Panel = () => {
   return (
-    <article class="panel large-panel">
+    <article className="panel large-panel">
       <HeaderPanel />
       <FormularioAltaReceta />
     </article>

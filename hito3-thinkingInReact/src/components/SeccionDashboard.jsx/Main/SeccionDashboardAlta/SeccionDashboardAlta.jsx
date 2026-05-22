@@ -3,7 +3,7 @@ import PanelUso from "./PanelUso";
 
 const SeccionDashboardAlta = () => {
   return (
-    <section class="dashboard-grid">
+    <section className="dashboard-grid">
       <Panel />
       <PanelUso />
     </section>

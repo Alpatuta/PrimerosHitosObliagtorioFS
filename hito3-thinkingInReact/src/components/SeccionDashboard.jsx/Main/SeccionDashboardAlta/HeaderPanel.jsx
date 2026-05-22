@@ -1,11 +1,11 @@
 const HeaderPanel = () => {
   return (
-    <div class="section-heading">
+    <div className="section-heading">
       <div>
-        <p class="eyebrow">Alta</p>
+        <p className="eyebrow">Alta</p>
         <h2>Agregar nueva receta</h2>
       </div>
-      <span class="status-chip">Disponible</span>
+      <span className="status-chip">Disponible</span>
     </div>
   );
 };
