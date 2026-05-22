@@ -11,219 +11,251 @@
 <body class="spa-root">
 
 
-  <main class="spa-stage"></main>
-  <section id="login" class="screen screen-auth" aria-labelledby="login-title"> </section>
-  <div class="auth-shell">
-    <section class="auth-visual" aria-label="Presentacion de Recetario IA"></section>
-    <section class="auth-card"></section>
-  </div>
-
-
-  <section id="registro" class="screen screen-auth" aria-labelledby="registro-title">
-    <div class="auth-shell auth-shell-reverse">
+  <main class="spa-stage">
+    <section id="login" class="screen screen-auth" aria-labelledby="login-title"> </section>
+    <div class="auth-shell">
+      <section class="auth-visual" aria-label="Presentacion de Recetario IA"></section>
       <section class="auth-card"></section>
     </div>
-  </section>
 
-  <section id="dashboard" class="screen screen-dashboard" aria-labelledby="dashboard-title">
-    <div class="app-layout">
-      <aside class="sidebar">
-        <a class="brand" href="#dashboard">
-          <span class="brand-mark">R</span>
-          <span>Recetario IA</span>
-        </a>
 
-        <nav class="nav-list" aria-label="Navegacion principal">
-          <a class="active" href="#dashboard">Resumen</a>
-          <a href="#dashboard">Agregar receta</a>
-          <a href="#dashboard">Recetas</a>
-          <a href="#dashboard">Uso del plan</a>
-          <a href="#dashboard">Grafico</a>
-        </nav>
+    <section id="registro" class="screen screen-auth" aria-labelledby="registro-title">
+      <div class="auth-shell auth-shell-reverse">
+        <section class="auth-card"></section>
+      </div>
+    </section>
 
-        <a class="button button-ghost logout-link" href="#login">Cerrar sesion</a>
-      </aside>
+    //Dashboard.jsx
+    <section id="dashboard" class="screen screen-dashboard" aria-labelledby="dashboard-title">
+      <div class="app-layout">
+        //Sidebar.jsx
+        <aside class="sidebar">
+          //HeaderSidebar.jsx
+          <a class="brand" href="#dashboard">
+            <span class="brand-mark">R</span>
+            <span>Recetario IA</span>
+          </a>
 
-      <main class="dashboard">
-        <header class="topbar">
-          <div>
-            <p class="eyebrow">Dashboard</p>
-            <h1 id="dashboard-title">Gestion general de recetas</h1>
-          </div>
-          <div class="profile-pill">
-            <span class="avatar">RP</span>
+          //NavbarSidebar.jsx
+          <nav class="nav-list" aria-label="Navegacion principal">
+            <a class="active" href="#dashboard">Resumen</a>
+            <a href="#dashboard">Agregar receta</a>
+            <a href="#dashboard">Recetas</a>
+            <a href="#dashboard">Uso del plan</a>
+            <a href="#dashboard">Grafico</a>
+          </nav>
+
+          <a class="button button-ghost logout-link" href="#login">Cerrar sesion</a>
+        </aside>
+
+        //Main.jsx
+        <main class="dashboard">
+          //HeaderMain.jsx
+          <header class="topbar">
             <div>
-              <strong>Rodrigo</strong>
-              <span>Plan plus</span>
+              <p class="eyebrow">Dashboard</p>
+              <h1 id="dashboard-title">Gestion general de recetas</h1>
             </div>
-          </div>
-        </header>
-
-        <section class="metrics-grid" aria-label="Resumen de uso">
-          <article class="metric">
-            <span class="metric-label">Recetas guardadas</span>
-            <strong>3 / 4</strong>
-            <small>75% de uso del plan plus</small>
-          </article>
-          <article class="metric">
-            <span class="metric-label">Categorias</span>
-            <strong>5</strong>
-            <small>Organizacion principal</small>
-          </article>
-          <article class="metric">
-            <span class="metric-label">Reviews</span>
-            <strong>12</strong>
-            <small>Actividad reciente</small>
-          </article>
-          <article class="metric">
-            <span class="metric-label">Imagenes</span>
-            <strong>8</strong>
-            <small>Subidas a la aplicacion</small>
-          </article>
-        </section>
-
-        <section class="dashboard-grid">
-          <article class="panel large-panel">
-            <div class="section-heading">
+            <div class="profile-pill">
+              <span class="avatar">RP</span>
               <div>
-                <p class="eyebrow">Alta</p>
-                <h2>Agregar nueva receta</h2>
+                <strong>Rodrigo</strong>
+                <span>Plan plus</span>
               </div>
-              <span class="status-chip">Disponible</span>
             </div>
+          </header>
 
-            <form class="recipe-form">
-              <div class="field">
-                <label for="receta-titulo">Titulo</label>
-                <input id="receta-titulo" type="text" placeholder="Tarta rustica de verduras" />
+          //Metricas.jsx
+          <section class="metrics-grid" aria-label="Resumen de uso">
+            //TarjetaMetrica.jsx
+            <article class="metric">
+              <span class="metric-label">Recetas guardadas</span>
+              <strong>3 / 4</strong>
+              <small>75% de uso del plan plus</small>
+            </article>
+
+            //TarjetaMetrica.jsx
+            <article class="metric">
+              <span class="metric-label">Categorias</span>
+              <strong>5</strong>
+              <small>Organizacion principal</small>
+            </article>
+
+            //TarjetaMetrica.jsx
+            <article class="metric">
+              <span class="metric-label">Reviews</span>
+              <strong>12</strong>
+              <small>Actividad reciente</small>
+            </article>
+
+            //TarjetaMetrica.jsx
+            <article class="metric">
+              <span class="metric-label">Imagenes</span>
+              <strong>8</strong>
+              <small>Subidas a la aplicacion</small>
+            </article>
+          </section>
+
+          //SeccionDashboardAlta.jsx
+          <section class="dashboard-grid">
+            //Panel.jsx
+            <article class="panel large-panel">
+              //HeaderPanel.jsx
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Alta</p>
+                  <h2>Agregar nueva receta</h2>
+                </div>
+                <span class="status-chip">Disponible</span>
               </div>
 
-              <div class="field">
-                <label for="receta-categoria">Categoria</label>
-                <select id="receta-categoria">
+              //FormularioAltaReceta.jsx
+              <form class="recipe-form">
+                <div class="field">
+                  <label for="receta-titulo">Titulo</label>
+                  <input id="receta-titulo" type="text" placeholder="Tarta rustica de verduras" />
+                </div>
+
+                <div class="field">
+                  <label for="receta-categoria">Categoria</label>
+                  <select id="receta-categoria">
+                    <option>Vegetariana</option>
+                    <option>Pastas</option>
+                    <option>Postres</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="receta-dificultad">Dificultad</label>
+                  <select id="receta-dificultad">
+                    <option>Facil</option>
+                    <option>Media</option>
+                    <option>Dificil</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="receta-imagen">Imagen</label>
+                  <input id="receta-imagen" type="file" />
+                </div>
+
+                <div class="field span-2">
+                  <label for="receta-descripcion">Descripcion</label>
+                  <textarea id="receta-descripcion" rows="4" placeholder="Descripcion breve de la receta"></textarea>
+                </div>
+
+                <div class="field span-2">
+                  <label for="receta-ingredientes">Ingredientes</label>
+                  <textarea id="receta-ingredientes" rows="3" placeholder="Harina, huevos, queso, vegetales"></textarea>
+                </div>
+
+                <div class="field span-2">
+                  <label for="receta-pasos">Pasos</label>
+                  <textarea id="receta-pasos" rows="4" placeholder="Preparar, mezclar, hornear y servir"></textarea>
+                </div>
+
+                <button class="button button-primary span-2" type="button">Guardar receta</button>
+              </form>
+            </article>
+
+            //PanelUso.jsx
+            <aside class="panel usage-panel">
+              <p class="eyebrow">Informe de uso</p>
+              <h2>Plan plus</h2>
+              <div class="usage-ring" aria-hidden="true">
+                <span>75%</span>
+              </div>
+              <p class="muted">3 de 4 recetas disponibles utilizadas.</p>
+              <button class="button button-secondary" type="button">Cambiar a premium</button>
+            </aside>
+          </section>
+
+          //SeccionDashboardListado.jsx
+          <section class="panel">
+            //HeaderListado.jsx
+            <div class="section-heading">
+
+              <div>
+                <p class="eyebrow">Documentos</p>
+                <h2>Listado de recetas</h2>
+              </div>
+
+              //FiltrosListado.jsx
+              <div class="filter-row">
+                <select aria-label="Filtrar por categoria">
+                  <option>Todas las categorias</option>
                   <option>Vegetariana</option>
                   <option>Pastas</option>
-                  <option>Postres</option>
                 </select>
-              </div>
-
-              <div class="field">
-                <label for="receta-dificultad">Dificultad</label>
-                <select id="receta-dificultad">
+                <select aria-label="Filtrar por dificultad">
+                  <option>Todas las dificultades</option>
                   <option>Facil</option>
                   <option>Media</option>
-                  <option>Dificil</option>
                 </select>
               </div>
-
-              <div class="field">
-                <label for="receta-imagen">Imagen</label>
-                <input id="receta-imagen" type="file" />
-              </div>
-
-              <div class="field span-2">
-                <label for="receta-descripcion">Descripcion</label>
-                <textarea id="receta-descripcion" rows="4" placeholder="Descripcion breve de la receta"></textarea>
-              </div>
-
-              <div class="field span-2">
-                <label for="receta-ingredientes">Ingredientes</label>
-                <textarea id="receta-ingredientes" rows="3" placeholder="Harina, huevos, queso, vegetales"></textarea>
-              </div>
-
-              <div class="field span-2">
-                <label for="receta-pasos">Pasos</label>
-                <textarea id="receta-pasos" rows="4" placeholder="Preparar, mezclar, hornear y servir"></textarea>
-              </div>
-
-              <button class="button button-primary span-2" type="button">Guardar receta</button>
-            </form>
-          </article>
-
-          <aside class="panel usage-panel">
-            <p class="eyebrow">Informe de uso</p>
-            <h2>Plan plus</h2>
-            <div class="usage-ring" aria-hidden="true">
-              <span>75%</span>
             </div>
-            <p class="muted">3 de 4 recetas disponibles utilizadas.</p>
-            <button class="button button-secondary" type="button">Cambiar a premium</button>
-          </aside>
-        </section>
 
-        <section class="panel">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Documentos</p>
-              <h2>Listado de recetas</h2>
-            </div>
-            <div class="filter-row">
-              <select aria-label="Filtrar por categoria">
-                <option>Todas las categorias</option>
-                <option>Vegetariana</option>
-                <option>Pastas</option>
-              </select>
-              <select aria-label="Filtrar por dificultad">
-                <option>Todas las dificultades</option>
-                <option>Facil</option>
-                <option>Media</option>
-              </select>
-            </div>
-          </div>
+            //RecetasListado.jsx
+            <div class="recipe-list">
+              //TarjetaReceta.jsx
+              <article class="recipe-row">
+                <img src="./assets/recipe-board.svg" alt="Miniatura de receta vegetariana" />
+                <div>
+                  <strong>Tarta rustica de verduras</strong>
+                  <span>Vegetariana · Media · 4 ingredientes</span>
+                </div>
+                <div class="row-actions">
+                  <button type="button">Editar</button>
+                  <button class="danger" type="button">Eliminar</button>
+                </div>
+              </article>
 
-          <div class="recipe-list">
-            <article class="recipe-row">
-              <img src="./assets/recipe-board.svg" alt="Miniatura de receta vegetariana" />
+              //TarjetaReceta.jsx
+              <article class="recipe-row">
+                <img src="./assets/recipe-board.svg" alt="Miniatura de pasta casera" />
+                <div>
+                  <strong>Pasta cremosa con hierbas</strong>
+                  <span>Pastas · Facil · 6 ingredientes</span>
+                </div>
+                <div class="row-actions">
+                  <button type="button">Editar</button>
+                  <button class="danger" type="button">Eliminar</button>
+                </div>
+              </article>
+
+              //TarjetaReceta.jsx
+              <article class="recipe-row">
+                <img src="./assets/recipe-board.svg" alt="Miniatura de postre" />
+                <div>
+                  <strong>Brownie intenso de cacao</strong>
+                  <span>Postres · Facil · 5 ingredientes</span>
+                </div>
+                <div class="row-actions">
+                  <button type="button">Editar</button>
+                  <button class="danger" type="button">Eliminar</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          //SeccionDashboardGrafico.jsx
+          <section class="panel">
+            //HeaderGrafico.jsx
+            <div class="section-heading">
               <div>
-                <strong>Tarta rustica de verduras</strong>
-                <span>Vegetariana · Media · 4 ingredientes</span>
+                <p class="eyebrow">Visualizacion</p>
+                <h2>Espacio reservado para grafico</h2>
               </div>
-              <div class="row-actions">
-                <button type="button">Editar</button>
-                <button class="danger" type="button">Eliminar</button>
-              </div>
-            </article>
-
-            <article class="recipe-row">
-              <img src="./assets/recipe-board.svg" alt="Miniatura de pasta casera" />
-              <div>
-                <strong>Pasta cremosa con hierbas</strong>
-                <span>Pastas · Facil · 6 ingredientes</span>
-              </div>
-              <div class="row-actions">
-                <button type="button">Editar</button>
-                <button class="danger" type="button">Eliminar</button>
-              </div>
-            </article>
-
-            <article class="recipe-row">
-              <img src="./assets/recipe-board.svg" alt="Miniatura de postre" />
-              <div>
-                <strong>Brownie intenso de cacao</strong>
-                <span>Postres · Facil · 5 ingredientes</span>
-              </div>
-              <div class="row-actions">
-                <button type="button">Editar</button>
-                <button class="danger" type="button">Eliminar</button>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="panel">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Visualizacion</p>
-              <h2>Espacio reservado para grafico</h2>
             </div>
-          </div>
-          <div class="chart-placeholder">
-            <span>Grafico pendiente para siguiente hito</span>
-          </div>
-        </section>
-      </main>
-    </div>
-  </section>
+
+            //Grafico.jsx
+            <div class="chart-placeholder">
+              <span>Grafico pendiente para siguiente hito</span>
+            </div>
+          </section>
+        </main>
+      </div>
+    </section>
   </main>
 </body>
 
