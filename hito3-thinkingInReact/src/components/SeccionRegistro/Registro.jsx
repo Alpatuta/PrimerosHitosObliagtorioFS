@@ -1,3 +1,6 @@
+import AuthCardRegistro from "./AuthCardRegistro";
+import AuthVisualRegistro from "./AuthVisualRegistro";
+
 const Registro = () => {
   return (
     <section
@@ -5,7 +8,10 @@ const Registro = () => {
       className="screen screen-auth"
       aria-labelledby="registro-title"
     >
-      <div className="auth-shell auth-shell-reverse"></div>
+      <div className="auth-shell auth-shell-reverse">
+        <AuthCardRegistro />
+        <AuthVisualRegistro />
+      </div>
     </section>
   );
 };
