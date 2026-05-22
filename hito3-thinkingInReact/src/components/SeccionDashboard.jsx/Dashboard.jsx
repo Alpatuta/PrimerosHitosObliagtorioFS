@@ -1,3 +1,6 @@
+import MainDashboard from "./Main/MainDashboard";
+import Sidebar from "./Sidebar/Sidebar";
+
 const Dashboard = () => {
   return (
     <section
@@ -5,7 +8,10 @@ const Dashboard = () => {
       className="screen screen-dashboard"
       aria-labelledby="dashboard-title"
     >
-      <div className="app-layout"></div>
+      <div className="app-layout">
+        <Sidebar />
+        <MainDashboard />
+      </div>
     </section>
   );
 };

@@ -1,3 +1,6 @@
+import HeaderSidebar from "./HeaderSidebar";
+import NavbarSidebar from "./NavbarSidebar";
+
 const Sidebar = () => {
   return (
     <aside className="sidebar">
